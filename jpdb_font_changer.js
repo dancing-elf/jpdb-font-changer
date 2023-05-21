@@ -40,7 +40,7 @@ function setFont() {
     setFontForAllElement('ruby');
     setFontForAllElement('.nav-item');
     setFontForAllElement('.description');
-    setFontForAllElement('input');
+    //setFontForAllElement('input');
 
     // Cyrillic fonts are possible in custom meaning so don't apply custom font here
     // because many of them can't work with cyrillic fonts properly
