@@ -40,13 +40,18 @@ function setFont() {
     setFontForAllElement('ruby');
     setFontForAllElement('.nav-item');
     setFontForAllElement('.description');
-    //setFontForAllElement('input');
 
     // Cyrillic fonts are possible in custom meaning so don't apply custom font here
     // because many of them can't work with cyrillic fonts properly
     let customMeaning = document.querySelector('.custom-meaning')
     if (customMeaning) {
         customMeaning.style.fontFamily = preferredCustomMeaningFonts;
+    }
+
+    let reviewButtonGroup = document.querySelector('.review-button-group');
+    if (reviewButtonGroup) {
+        // other fonts can break interface (?)
+        reviewButtonGroup.style.fontFamily = defaultFonts;
     }
 }
 
