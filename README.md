@@ -1,2 +1,3 @@
 # jpdb-font-changer
-Customize fonts for jpdb.io
+
+Change values of 'preferredFonts' and 'preferredCustomMeaningFonts' variables to override jpdb default fonts. 
