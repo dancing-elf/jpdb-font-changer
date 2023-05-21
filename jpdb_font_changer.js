@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+// Maybe Stylus would be much better
+
 // default jpdb fonts
 const defaultFonts = '"Nunito Sans","Extra Sans JP","Noto Sans Symbols2","Segoe UI",' +
     '"Noto Sans JP","Noto Sans CJK JP","Hiragino Sans GB","Meiryo",sans-serif';
@@ -27,7 +29,7 @@ const preferredCustomMeaningFonts = defaultFonts;
     'use strict';
     setFont();
     // needed for review page
-    waitForElm(`'.subsection-pitch-accent' .subsection`).then((elm) => {
+    waitForElm('.subsection-meanings .subsection').then((elm) => {
         setFont();
     });
 })();
@@ -38,6 +40,7 @@ function setFont() {
     setFontForAllElement('ruby');
     setFontForAllElement('.nav-item');
     setFontForAllElement('.description');
+    setFontForAllElement('input');
 
     // Cyrillic fonts are possible in custom meaning so don't apply custom font here
     // because many of them can't work with cyrillic fonts properly
